@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content%}
+    <h3 class="jumbotron text-center">Post article Here</h3>
+<div class="container">
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        {% if user.is_authenticated %}
+
+            <div class="form-row"> <span class="badge" style="float: right;">Logged in As: {{ user.username }}</span></div>
+
+            <div class="form-group">
+                <label>Title: </label><input class="form-control" type="text" name="title"/><br/></div>
+           <div class="form-group">
+               <label>Author:</label>
+               <input class="form-control" type="text" name="author"></div>
+           <div class="form-group"><label> Date:</label><input class="form-control" type="date" name="published_date"></div>
+           <div class="form-group"><label> Slug:</label><input class="form-control" type="text" name="slug"></div>
+
+            <input type="file" name="document">
+            <br>
+
+            <div class="form-group"><label>Description:</label>
+            <textarea class="form-control" cols="35" rows="8" name="description"></textarea></div>
+
+           <input type="submit" value="Post"/>
+            </form>
+
+            <a class="badge" style="float: right;" href="{% url 'logout' %}">Logout</a>
+        {% endif %}
+</div>
+{% endblock %}

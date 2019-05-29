@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <title>Base</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg" style="background-color: darkgray;">
+    <a class="navbar-brand" href="#">Blog</a>
+    <div class="navbar-items">
+    </div>
+    <div class="collapse navbar-collapse" style="margin-top:1%;" id="navbarSupportedContent">
+        <ul class="navbar-nav list-unstyled">
+            <li class="nav-item active col-sm-2">
+                <a class="nav-link text-white" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="col-sm-2"></li>
+            <li class="nav-item col-sm-2">
+                <a class="nav-link text-white" href="{% url 'about' %}">About</a>
+            </li>
+            <li class="col-sm-2"></li>
+            <li class="nav-item col-sm-2">
+                <a class="nav-link text-white" href="{% url 'login' %}">Admin</a>
+            </li>
+        </ul>
+    </div>
+
+
+</nav>
+
+{% block content %}
+
+{% endblock %}
+
+<footer class="page-footer bg-primary">
+    <center><h3>@ Project By: Dipendra Pant</h3></center>
+</footer>
+</body>
+</html>
